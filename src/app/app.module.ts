@@ -9,7 +9,7 @@ import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component
 import { RecipesComponent } from './recipes/recipes.component';
 import { ShoppingListEditComponent } from './shopping-list/shopping-list-edit/shopping-list-edit.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
-import { HeaderEnums } from './shared/header.enum';
+import { DropdownDirective } from './shared/dropdown.directive';
 
 @NgModule({
   declarations: [
@@ -21,6 +21,7 @@ import { HeaderEnums } from './shared/header.enum';
     RecipeItemComponent,
     RecipeDetailComponent,
     ShoppingListEditComponent,
+    DropdownDirective,
   ],
   imports: [BrowserModule, FormsModule],
   providers: [],
