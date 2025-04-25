@@ -7,24 +7,14 @@ import {
   output,
   signal,
 } from '@angular/core';
-import { DUMMY_USERS } from '../dummy-users';
 
-// type User = {
-//     id: string;
-//     name: string;
-//     avatar: string;
-// };
-
-interface User {
-  id: string;
-  name: string;
-  avatar: string;
-}
+import { User } from './models/users.models';
+import { CardsComponent } from '../shared/cards/cards.component';
 
 @Component({
   selector: 'app-user',
   standalone: true,
-  imports: [],
+  imports: [CardsComponent],
   templateUrl: './user.component.html',
   styleUrl: './user.component.css',
 })
@@ -36,7 +26,7 @@ export class UserComponent {
   // @Input({ required: true }) id!: string;
   @Output() selectedUser = new EventEmitter<string>();
   // selectedUser = output<string>();
-
+  selected = input.required<boolean>();
   // avatar = input<string>();
   // name = input.required<string>();
 
