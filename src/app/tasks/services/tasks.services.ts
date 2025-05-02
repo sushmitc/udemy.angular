@@ -21,6 +21,7 @@ export class TasksServices {
       this.tasks = JSON.parse(_tasks);
     } else {
       localStorage.setItem('tasks', JSON.stringify(DUMMY_Tasks));
+      this.tasks = DUMMY_Tasks;
     }
   }
 
